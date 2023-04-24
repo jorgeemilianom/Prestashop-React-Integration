@@ -1,0 +1,7 @@
+#files
+yarn.lock
+
+
+#folders
+/dist
+/node_modules
