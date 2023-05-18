@@ -7,12 +7,10 @@ class React
     public $assets = '';
     public $react_host = 'http://localhost:5174';
     public $Context;
-    public $_path;
 
-    public function __construct($_path)
+    public function __construct()
     {
         $this->Context = new Context();
-        $this->_path = $_path;
         $this->assets = $this->getAssets();
     }
 
@@ -37,7 +35,7 @@ class React
         // Devolver la lista de nombres de archivos
         $assets = '';
         foreach($files as $file){
-            $assets .= '<script type="module" src="'.$this->_path.'react/dist/assets/'.$file.'"></script>';
+            $assets .= '<script type="module" src="'.dirname(__FILE__).'react/dist/assets/'.$file.'"></script>';
         }
 
         return $assets;
