@@ -40,4 +40,9 @@ class React
 
         return $assets;
     }
+
+    public function render()
+    {
+        return $this->assets . '<div id="reactintegration"></div>';
+    }
 }
